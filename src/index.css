@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container{
+max-width: 960px;
+margin-right: auto;
+margin-left:auto;
+padding-right: 15px;
+padding-left:15px;
+min-height: 100vh;
+
+  
+}
+.notes-list{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));/* grid of size try 4 (autofit)&& minmax for autofit*/
+}
+.note.new{
+  background-color:lightcyan;
+}
+  
+textarea{
+  border: none;
+  resize: none;
+  background-color:lightcyan;
+
+}
+textarea:focus{
+  outline: none;
+}
+.save{
+  background-color:gray;
+  border: none;
+  border-radius:15px;
+  padding:5px 10px 5px 10px ;
+
+}
+.save:hover{
+  background-color: rgb(167, 159, 159);
+  cursor: pointer;
+}
+
+
+.note{
+  background-color: bisque;
+  
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;/* to include spaces */
+}
+.note-footer{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.delete-icon{
+  cursor: pointer;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding:5px;
+  margin-bottom: 1.5rem;
+}
+.search input{
+width: max-content;
+border: none;
+background-color:whitesmoke;
+ 
+}
+.search input:focus{
+  outline: none;
+  
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.dark-mode{
+  background-color: black;
+}
+.dark-mode h1{
+  color:white;
+}
+h1{
+  font-size:35px;
+}
+
