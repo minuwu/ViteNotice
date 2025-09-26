@@ -1,83 +1,83 @@
 const Footer = () => {
   return (
-    <footer class="mt-16 bg-gradient-to-r from-[#123524] via-[#3E7B27] to-[#123524] pt-12 pb-8 px-10 font-sans tracking-wide">
-        <div class="max-w-screen-xl mx-auto">
-          <div class="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="mt-16 bg-gradient-to-r from-[#123524] via-[#3E7B27] to-[#123524] pt-12 pb-8 px-10 font-sans tracking-wide">
+        <div className="max-w-screen-xl mx-auto">
+          <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h4 class="text-white text-lg mb-6"> Regular Office </h4>
-              <ul class="space-y-4">
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Promotional Application</a>
+              <h4 className="text-white text-lg mb-6"> Regular Office </h4>
+              <ul className="space-y-4">
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Promotional Application</a>
                 </li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Recreational Allowance</a>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Recreational Allowance</a>
                 </li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Provident Funds</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Medical Loans</a></li>
-                <li class="text-[15px]"><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Pension Nominee</a>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Provident Funds</a></li>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Medical Loans</a></li>
+                <li className="text-[15px]"><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Pension Nominee</a>
                 </li>
               </ul>
   
             </div>
   
             <div>
-              <h4 class="text-white text-lg mb-6">Academic Section</h4>
-              <ul class="space-y-4">
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Migration Certificate</a>
+              <h4 className="text-white text-lg mb-6">Academic Section</h4>
+              <ul className="space-y-4">
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Migration Certificate</a>
                 </li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Student Registration</a>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Student Registration</a>
                 </li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Enrollment Form</a>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Enrollment Form</a>
                 </li>
-                <li class="text-[15px]"><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">PhD Enrollment</a></li>
+                <li className="text-[15px]"><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">PhD Enrollment</a></li>
               </ul>
             </div>
   
             <div>
-              <h4 class="text-white text-lg mb-6">Resources</h4>
-              <ul class="space-y-4">
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Academy</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Blog</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Developer</a>
+              <h4 className="text-white text-lg mb-6">Resources</h4>
+              <ul className="space-y-4">
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Academy</a></li>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Blog</a></li>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Developer</a>
                 </li>
-                <li class="text-[15px]"><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Support</a></li>
+                <li className="text-[15px]"><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Support</a></li>
               </ul>
             </div>
   
             <div>
-              <h4 class="text-white text-lg mb-6">University</h4>
-              <ul class="space-y-4">
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">About us</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Careers</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">FAQs</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Terms</a></li>
-                <li class="text-[15px]"><a href="javascript:void(0)" class="text-gray-300 hover:text-white text-[15px]">Contact us</a>
+              <h4 className="text-white text-lg mb-6">University</h4>
+              <ul className="space-y-4">
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">About us</a></li>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Careers</a></li>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">FAQs</a></li>
+                <li><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Terms</a></li>
+                <li className="text-[15px]"><a href="javascript:void(0)" className="text-gray-300 hover:text-white text-[15px]">Contact us</a>
                 </li>
               </ul>
             </div>
           </div>
   
-          <hr class="my-8 border-gray-500" />
+          <hr className="my-8 border-gray-500" />
   
-          <div class="grid max-md:grid-cols-1 md:grid-cols-2 items-center gap-8">
-            <div class="max-w-lg">
-              <h4 class="text-white text-lg mb-4">Join our newsletter - Notices directly to your email</h4>
-              <div class="bg-white flex px-1 py-1 rounded-full text-left">
-                <input type='email' placeholder='Enter your email' class="w-full outline-none bg-transparent pl-4 text-[15px]" />
+          <div className="grid max-md:grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div className="max-w-lg">
+              <h4 className="text-white text-lg mb-4">Join our newsletter - Notices directly to your email</h4>
+              <div className="bg-white flex px-1 py-1 rounded-full text-left">
+                <input type='email' placeholder='Enter your email' className="w-full outline-none bg-transparent pl-4 text-[15px]" />
                 <button type='button'
-                  class="bg-[#31135e] text-white text-[15px] rounded-full px-4 py-2 tracking-wide">Subscribe</button>
+                  className="bg-[#31135e] text-white text-[15px] rounded-full px-4 py-2 tracking-wide">Subscribe</button>
               </div>
             </div>
   
-            <ul class="flex flex-wrap md:justify-end gap-x-6 gap-4">
+            <ul className="flex flex-wrap md:justify-end gap-x-6 gap-4">
               <li>
                 <a href='javascript:void(0)'>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="fill-blue-600 w-8 h-8" viewBox="0 0 49.652 49.652">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="fill-blue-600 w-8 h-8" viewBox="0 0 49.652 49.652">
                     <path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zM31 25.7h-4.039v14.396h-5.985V25.7h-2.845v-5.088h2.845v-3.291c0-2.357 1.12-6.04 6.04-6.04l4.435.017v4.939h-3.219c-.524 0-1.269.262-1.269 1.386v2.99h4.56z" data-original="#000000" />
                   </svg>
                 </a>
               </li>
               <li>
                 <a href='javascript:void(0)'>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 112.196 112.196">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 112.196 112.196">
                     <circle cx="56.098" cy="56.097" r="56.098" fill="#007ab9" data-original="#007ab9" />
                     <path fill="#fff" d="M89.616 60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118-3.705 0-5.906 2.491-6.878 4.903-.353.862-.444 2.059-.444 3.268v22.524h-13.41s.18-36.546 0-40.329h13.411v5.715c-.027.045-.065.089-.089.132h.089v-.132c1.782-2.742 4.96-6.662 12.085-6.662 8.822 0 15.436 5.764 15.436 18.149zm-54.96-36.642c-4.587 0-7.588 3.011-7.588 6.967 0 3.872 2.914 6.97 7.412 6.97h.087c4.677 0 7.585-3.098 7.585-6.97-.089-3.956-2.908-6.967-7.496-6.967zm-6.791 59.77H41.27v-40.33H27.865v40.33z" data-original="#f1f2f2" />
                   </svg>
@@ -85,13 +85,13 @@ const Footer = () => {
               </li>
               <li>
                 <a href='javascript:void(0)'>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 152 152">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 152 152">
                     <linearGradient id="a" x1="22.26" x2="129.74" y1="22.26" y2="129.74" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#fae100" />
-                      <stop offset=".15" stop-color="#fcb720" />
-                      <stop offset=".3" stop-color="#ff7950" />
-                      <stop offset=".5" stop-color="#ff1c74" />
-                      <stop offset="1" stop-color="#6c1cd1" />
+                      <stop offset="0" stopColor="#fae100" />
+                      <stop offset=".15" stopColor="#fcb720" />
+                      <stop offset=".3" stopColor="#ff7950" />
+                      <stop offset=".5" stopColor="#ff1c74" />
+                      <stop offset="1" stopColor="#6c1cd1" />
                     </linearGradient>
                     <g data-name="Layer 2">
                       <g data-name="03.Instagram">
@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href='javascript:void(0)'>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 1227 1227">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 1227 1227">
                     <path d="M613.5 0C274.685 0 0 274.685 0 613.5S274.685 1227 613.5 1227 1227 952.315 1227 613.5 952.315 0 613.5 0z" data-original="#000000" />
                     <path fill="#fff" d="m680.617 557.98 262.632-305.288h-62.235L652.97 517.77 470.833 252.692H260.759l275.427 400.844-275.427 320.142h62.239l240.82-279.931 192.35 279.931h210.074L680.601 557.98zM345.423 299.545h95.595l440.024 629.411h-95.595z" data-original="#ffffff" />
                   </svg>
@@ -117,7 +117,7 @@ const Footer = () => {
             </ul>
           </div>
   
-          <p class='text-gray-300 text-[15px] mt-6'>© github/minuwu. All rights reserved.</p>
+          <p className='text-gray-300 text-[15px] mt-6'>© github/minuwu. All rights reserved.</p>
         </div>
       </footer>
   );

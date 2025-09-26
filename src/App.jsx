@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { nanoid } from 'nanoid';
 import NotesList from './components/NoteList';
 import Search from './components/Search';
@@ -16,25 +16,30 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [isBackendAvailable, setIsBackendAvailable] = useState(true);
   const [selectedNav, setSelectedNav] = useState('all');
-  useEffect(() => {
-    const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
-    if (savedNotes) setNotes(savedNotes);
 
+  useEffect(() => {
     const savedTheme = JSON.parse(localStorage.getItem('dark-mode'));
     if (savedTheme !== null) setDarkMode(savedTheme);
     
     const savedAdmin = JSON.parse(localStorage.getItem('admin-auth'));
     if (savedAdmin) setIsAdmin(savedAdmin);
 
+    // Try to fetch from backend first
     axios.get('http://localhost:5000/notes')
-      .then(response => setNotes(response.data))
-      .catch(error => console.error('Error loading notes:', error));
+      .then(response => {
+        setNotes(response.data);
+        setIsBackendAvailable(true);
+      })
+      .catch(error => {
+        console.error('Backend not available, falling back to localStorage:', error);
+        setIsBackendAvailable(false);
+        // Failsafe: Load from localStorage if backend fails
+        const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
+        if (savedNotes) setNotes(savedNotes);
+      });
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('react-notes-app-data', JSON.stringify(notes));
-  }, [notes]);
 
   useEffect(() => {
     localStorage.setItem('dark-mode', JSON.stringify(darkMode));
@@ -53,18 +58,28 @@ const App = () => {
     };
     const updatedNotes = [...notes, newNote];
     setNotes(updatedNotes);
-    axios.post('http://localhost:5000/notes', updatedNotes)
-      .then(() => console.log('Note added successfully'))
-      .catch(error => console.error('Error saving notes:', error));
+
+    if (isBackendAvailable) {
+      axios.post('http://localhost:5000/notes', updatedNotes)
+        .then(() => console.log('Note added and saved to backend.'))
+        .catch(error => console.error('Error saving notes to backend:', error));
+    } else {
+      localStorage.setItem('react-notes-app-data', JSON.stringify(updatedNotes));
+      console.log('Note added and saved to localStorage.');
+    }
   };
 
   const deleteNote = (id) => {
     if (isAdmin) {
       const updatedNotes = notes.filter((note) => note.id !== id);
       setNotes(updatedNotes);
-      axios.post('http://localhost:5000/notes', updatedNotes)
-        .then(() => console.log('Note deleted successfully'))
-        .catch(error => console.error('Error saving notes:', error));
+      if (isBackendAvailable) {
+        axios.post('http://localhost:5000/notes', updatedNotes)
+          .then(() => console.log('Note deleted and saved to backend.'))
+          .catch(error => console.error('Error saving notes to backend:', error));
+      } else {
+        localStorage.setItem('react-notes-app-data', JSON.stringify(updatedNotes));
+      }
     }
   };
 
@@ -102,19 +117,40 @@ const App = () => {
         
       </>}
 
-      {selectedNav==='facebook' && <>
-        <div className="container py-4 my-4 justify-center items-center">
-          <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
-
-            <div class="fb-page" data-href="https://www.facebook.com/RMSTU.Official.Page/" data-tabs="timeline" data-width="500" data-height="40000" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/RMSTU.Official.Page/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/RMSTU.Official.Page/">Rangamati Science and Technology University</a></blockquote></div>
-        </div>
-        
-      </>}
+      {selectedNav === 'facebook' && <FacebookPagePlugin />}
       
       <Footer/>
     </div>
   );
 };
+
+const FacebookPagePlugin = () => {
+  const fbContainerRef = useRef(null);
+
+  useEffect(() => {
+    // Ensure the script is loaded only once
+    if (window.FB) {
+      window.FB.XFBML.parse(fbContainerRef.current);
+    } else {
+      const script = document.createElement('script');
+      script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0";
+      script.async = true;
+      script.defer = true;
+      script.crossOrigin = 'anonymous';
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  return (
+    <div ref={fbContainerRef} className="container py-4 my-4 justify-center items-center">
+      <div id="fb-root"></div>
+      <div className="fb-page" data-href="https://www.facebook.com/RMSTU.Official.Page/" data-tabs="timeline" data-width="500" data-height="40000" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/RMSTU.Official.Page/" className="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/RMSTU.Official.Page/">Rangamati Science and Technology University</a>
+        </blockquote>
+      </div>
+    </div>
+  );
+}
 
 export default App;
