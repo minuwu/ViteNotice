@@ -14,9 +14,15 @@ ViteNotice is a lightweight, full-stack notice board application designed as a s
 
 ### Long Description -->
 
+
 This project serves as a practical demonstration of a full-stack application within a single repository. ViteNotice is a notice board system where users can view announcements relevant to RMSTU. The frontend is built with React and styled with Tailwind CSS, offering a responsive and modern user experience. The backend is a simple Express.js server that handles API requests for fetching, creating, and deleting notices.
 
 A key characteristic of this project is its data persistence strategy. Instead of a traditional database, it leverages Node.js's file system module (`fs`) to read from and write to JSON files, simulating a database. This approach simplifies the setup and makes the project highly portable. Administrative tasks like adding or removing a notice are gated behind a basic, hardcoded authentication system within the backend code, making it a straightforward example for learning and demonstration purposes. The entire development environment is managed with a single `npm run dev` command, which uses `concurrently` to run both the frontend and backend servers simultaneously.
+
+[**Visit the Live Site**](https://minuwu.github.io/ViteNotice/)
+
+> **Note:** The live demo showcases the frontend's failsafe mechanism. Since the backend is not hosted, the application defaults to using your browser's `localStorage` for creating and deleting notices.
+
 
 ## Screenshots
 
@@ -83,5 +89,3 @@ You need to have Node.js and npm installed on your machine.
 
 4.  **Open the app:**
     Navigate to the client URL provided in your terminal (e.g., `http://localhost:5173`) in your browser.
-
-
