@@ -1,5 +1,6 @@
 
 import {MdDeleteSweep} from 'react-icons/md';
+import calendarIcon from '/calendar.png';
 
 const Note = ({id,text,date,handleDeleteNote,isAdmin} ) =>{
     return(
@@ -11,7 +12,7 @@ const Note = ({id,text,date,handleDeleteNote,isAdmin} ) =>{
               
               </div>
               <div className="note-footer">
-              <small><img className='inline pr-1 w-7 h-7' src="calendar.png" alt="logo" /> {date}</small>
+              <small><img className='inline pr-1 w-7 h-7' src= {calendarIcon} alt="logo" /> {date}</small>
                   {isAdmin && <MdDeleteSweep 
                     onClick={()=>handleDeleteNote(id)}
                     className='delete-icon' size='1.3em'

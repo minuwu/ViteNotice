@@ -1,3 +1,4 @@
+import rmstuLogo from '/rmstu_logo.png';
 const Navbar = () => {
      // for navbar on small screen size
     //  var toggleOpen = document.getElementById('toggleOpen');
@@ -42,7 +43,7 @@ const Navbar = () => {
 
     return (<header class='flex shadow-md py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
         <div class='flex flex-wrap items-center justify-between lg:gap-y-4 gap-y-6 gap-x-4 w-full'>
-          <a href="javascript:void(0)"><img src="rmstu_logo.png" alt="logo" class='w-18' />
+          <a href="javascript:void(0)"><img src={rmstuLogo} alt="logo" class='w-18' />
           </a>
       
           <div id="collapseMenu"

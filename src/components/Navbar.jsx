@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import rmstuLogo from '/rmstu_logo.png';
 
 const Navbar = ({setSelectedNav}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = ({setSelectedNav}) => {
   return (
     <header className='flex shadow-md py-3 px-4 sm:px-10 bg-gradient-to-r from-[#F1F6CD] via-[#E6EFA3] to-[#F1F6CD] font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
       <div className='flex flex-wrap items-center justify-between lg:gap-y-4 gap-y-6 gap-x-4 w-full'>
-        <a href="javascript:void(0)"><img src="rmstu_logo.png" alt="logo" className='w-18' /></a>
+        <a href="javascript:void(0)"><img src={rmstuLogo} alt="logo" className='w-18' /></a>
 
         <div id="collapseMenu" className={`max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50 ${isMenuOpen ? 'block' : 'hidden'}`}>
           <button id="toggleClose" onClick={handleMenuToggle} className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>

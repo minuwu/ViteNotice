@@ -1,5 +1,5 @@
 import React from "react";
-
+import dayAndNight from '/day-and-night.png';
 
 const Header = ({handleToggleDarkMode, isAdmin}) =>{
     return(
@@ -11,7 +11,7 @@ const Header = ({handleToggleDarkMode, isAdmin}) =>{
                 (previousDarkMode) => !previousDarkMode
                 )
             }
-                 className="save flex gap-2 justify-center items-center">Switch<img className='w-5 h-5' src="./day-and-night.png" alt="logo" /></button>
+                 className="save flex gap-2 justify-center items-center">Switch<img className='w-5 h-5' src={dayAndNight} alt="logoDN" /></button>
                   
 
         </div>
