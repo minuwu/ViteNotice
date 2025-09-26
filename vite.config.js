@@ -4,7 +4,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  // base: './',
+  base: 'https://github.com/minuwu/ViteNotice/',
+  build: {
+    outDir: 'docs'
+  },
   plugins: [
     react(),
     tailwindcss()
