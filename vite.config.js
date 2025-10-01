@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   // base: './',
-  base: 'https://minuwu.github.io/ViteNotice/',
+  base: 'https://minuwu.is-a.dev/ViteNotice/',
   build: {
     outDir: 'docs'
   },
